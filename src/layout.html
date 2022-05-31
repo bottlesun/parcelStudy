@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <block name="title"><title>Parcel JS Layout Page.</title></block>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/main.css">
-        <block name="TopControl" />
-        <!--라이브러리 NPM-->
-        <script type="module" src="js/site.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <block name="title"><title>Parcel JS Layout Page.</title></block>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 
-    </head>
+    <block name="TopControl"/>
+    <!--라이브러리 NPM-->
+    <script type="module" src="js/site.js"></script>
+
+</head>
 
 <body>
-<header class="CommonLayout">Header Tag.</header>
+<div class="landings">
+    <block name="landing"/>
+</div>
+
+
+<header class="CommonLayout">
+    <nav>
+        <div class="logo">LOGO</div>
+        <ul class="nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">ContantUS</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main class="CommonLayout">
-    <block name="content" />
+    <block name="content"/>
 </main>
 
 <footer class="CommonLayout">Footer Tag.</footer>
 
-<block name="BottomControl" />
+<block name="BottomControl"/>
 </body>
 </html>

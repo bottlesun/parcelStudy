@@ -58,54 +58,70 @@
   src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff) format("woff");
   font-display: swap;
 }
-nav {
-  width: 100%;
-  max-width: 1350px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav .logo {
-  margin-left: 10px;
-  color: #FFEFD6;
-}
-nav .nav {
-  display: flex;
-}
-nav .nav li {
-  margin: 0 20px;
-}
-nav .nav li a {
-  color: #FFEFD6;
+body {
+  font-family: SCoreDream;
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-body .CommonLayout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-family: SCoreDream;
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
 }
-body header {
+
+.landings {
   width: 100%;
-  height: 70px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: #757C94;
-}
-body .nav-fixed {
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
 }
-body main {
+
+.landingWrap {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color: #757C94;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-body footer {
+.landingWrap .circle {
   width: 100%;
-  height: 150px;
-  background: #333333;
-  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.landingWrap .circle .circle_content {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  background: beige;
+  border-radius: 50%;
+  border: 1px solid #555;
+  position: relative;
+}
+.landingWrap .circle .circle_content:before {
+  position: absolute;
+  content: "";
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 1px solid #555;
+  background: #b46ea6;
+  mix-blend-mode: multiply;
+}
+.landingWrap .circle span {
+  font-size: 40px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #555555;
+  color: #757C94;
+  position: absolute;
+  z-index: 2;
+  mix-blend-mode: multiply;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=landing.css.map */

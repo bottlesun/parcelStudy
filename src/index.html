@@ -4,16 +4,24 @@
     </block>
     <block name="TopControl">
         <link rel="stylesheet" href="./css/main2.css">
+        <link rel="stylesheet" href="./css/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+
     </block>
 
-    <block name="content">
-            <main class="CommonLayout">
-                <block name="content">
-                    하이
-                </block>
-            </main>
+    <block name="landing">
+        <include src="landing.html"></include>
     </block>
+    <main class="CommonLayout">
+        <block name="content">
 
-    <block name="BottomControl"></block>
+        </block>
+    </main>
+
+
+    <block name="BottomControl">
+        <script src="js/landing.js"></script>
+    </block>
 
 </extends>

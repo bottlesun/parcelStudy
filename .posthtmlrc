@@ -1,10 +1,16 @@
 {
   "plugins": {
     "posthtml-include": {
-      root: './src/'
+      root: './src/',
+       "alias": {
+                "common": "./src/common",
+              }
     },
     "posthtml-extend": {
-      root: './src/'
+      root: './src/',
+       "alias": {
+                "common": "./src/common",
+              }
     }
   }
 }

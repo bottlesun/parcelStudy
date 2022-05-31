@@ -1,0 +1,71 @@
+@import "commonCSS";
+
+body {
+  font-family: SCoreDream;
+  scrollbar-width: none; /* Firefox */
+
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.landings {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.landingWrap {
+  width: 100%;
+  height: 100%;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    .circle_content {
+      width: 100%;
+      height: 100%;
+      max-width: 500px;
+      max-height: 500px;
+      background: beige;
+      border-radius: 50%;
+      border: 1px solid #555;
+      position: relative;
+
+      &:before{
+        position: absolute;
+        content: "";
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        border: 1px solid #555;
+        background: #b46ea6;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    span {
+      font-size: 40px;
+      font-weight: 900;
+      -webkit-text-stroke: 1px #555555;
+      color: $mainColor;
+      position: absolute;
+      z-index: 2;
+      mix-blend-mode: multiply;
+    }
+  }
+  
+}
