@@ -1,24 +1,25 @@
-
-
 /* 마우스 모션 */
 
 let x = 0,
     y = 0,
     mx = 0,
     my = 0,
-    speed = 0.03
+    speed = 0.03,
+    lendingDisplay = true
 
-let TextMoving = document.getElementById('parallax_2');
-let CircleContent = document.getElementsByClassName('circle_content')[0];
-
+let TextMoving = document.getElementById('parallax_2'),
+    CircleContent = document.getElementsByClassName('circle_content')[0],
+    landingWrap = document.querySelector('.landingWrap'),
+    nav = document.getElementsByTagName('header')[0];
 
 
 function TextAnimation() {
     window.addEventListener('mousemove', mouseMove);
 
-    CircleContent.addEventListener('mouseover',MouseHover);
-    CircleContent.addEventListener('mouseout',MouseHover);
-    window.addEventListener('click',ClickMove);
+    CircleContent.addEventListener('mouseover', MouseHover);
+    CircleContent.addEventListener('mouseout', MouseHover);
+    landingWrap.addEventListener('click', ClickMove);
+    loadEvent()
 
 
     loop()
@@ -32,9 +33,6 @@ function loop() { // 자연스러운 움직임 무한 루프를 줘서 모션의
     my += (y - my) * speed;
     TextMoving.style.transform = `translate(${-mx / 40}px,${-my / 40}px)`
 
-
-
-
     window.requestAnimationFrame(loop);
 }
 
@@ -47,48 +45,51 @@ function mouseMove(e) {
 
 function MouseHover(e) {
 
-    if(e.type === 'mouseover'){
+    if (e.type === 'mouseover') {
         let tl = gsap.timeline();
 
-        tl.to(CircleContent,{
-            scale : 1.2
+        tl.to(".circle_content", {
+            scale: 1.2
         })
-    } else if(e.type === 'mouseout'){
+    } else if (e.type === 'mouseout') {
         let tl = gsap.timeline();
-        tl.to(CircleContent,{
-            scale : 1,
-        })
-    }
-}
-
-
-function ClickMove(e){
-    if(e.type === 'click'){
-        let tl = gsap.timeline();
-
-        tl.to('.landingWrap',{
-            scale : 2,
-            autoAlpha : 0,
-            display:"none"
-        }).to('landings',{
-            display:"none"
+        tl.to(CircleContent, {
+            scale: 1,
         })
     }
 }
 
+
+function ClickMove(e) {
+    if (e.type === 'click') {
+        let tl = gsap.timeline();
+        tl.to(landingWrap, {
+            scale: 3,
+            display: "none",
+            attr: {['data-set']: false} ,
+        }).to('.landings', {
+            display: 'none'
+        }).from(nav,{
+            y : -100,
+        })
+    }
+}
+
+const loadEvent = () => {
+    let tl = gsap.timeline();
+    tl.from('.circle', {
+        autoAlpha: 0,
+        scale: 0.3,
+        stagger: 5,
+    }).from(TextMoving, {
+        autoAlpha: 0,
+        stagger: 5,
+    })
+}
 
 window.onload = () => {
-    let tl = gsap.timeline();
-    tl.from('.circle',{
-        autoAlpha:0,
-        scale : 0.3,
-        stagger:5,
-    }).from(TextMoving,{
-        autoAlpha:0,
-        stagger:5,
-    })
-
     TextAnimation()
+
 }
 
 

@@ -79,29 +79,162 @@ nav .nav li a {
   color: #FFEFD6;
 }
 
+/* 공통 색상  */
+/* 테스트 */
+/* 폰트 */
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 100;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 200;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 300;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 400;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 600;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 700;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 800;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff) format("woff");
+  font-display: swap;
+}
+body {
+  font-family: SCoreDream;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
+}
+
+.landings {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.landingWrap {
+  width: 100%;
+  height: 100%;
+  background-color: #757C94;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.landingWrap:before {
+  background: url("../image/paperTexture.jpg");
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  content: "";
+  position: absolute;
+}
+.landingWrap .circle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.landingWrap .circle .circle_content {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  background-color: beige;
+  border: 1px solid #555;
+  border-radius: 50%;
+  position: relative;
+}
+.landingWrap .circle span {
+  font-size: 40px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #555555;
+  color: #757C94;
+  position: absolute;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
 body .CommonLayout {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-family: SCoreDream;
+  font-family: SCoreDream sans-serif;
 }
-body header {
+body #mainWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: beige;
+}
+body #mainWrap header {
   width: 100%;
   height: 70px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: #757C94;
 }
-body .nav-fixed {
+body #mainWrap .nav-fixed {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
-body main {
+body #mainWrap main {
   width: 100%;
   height: 100vh;
 }
-body footer {
+body #mainWrap footer {
   width: 100%;
   height: 150px;
   background: #333333;

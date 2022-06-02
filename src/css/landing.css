@@ -85,6 +85,16 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
+}
+.landingWrap:before {
+  background: url("../image/paperTexture.jpg");
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  content: "";
+  position: absolute;
 }
 .landingWrap .circle {
   width: 100%;
@@ -99,20 +109,10 @@ body::-webkit-scrollbar {
   height: 100%;
   max-width: 500px;
   max-height: 500px;
-  background: beige;
-  border-radius: 50%;
+  background-color: beige;
   border: 1px solid #555;
+  border-radius: 50%;
   position: relative;
-}
-.landingWrap .circle .circle_content:before {
-  position: absolute;
-  content: "";
-  width: 70%;
-  height: 70%;
-  border-radius: 50%;
-  border: 1px solid #555;
-  background: #b46ea6;
-  mix-blend-mode: multiply;
 }
 .landingWrap .circle span {
   font-size: 40px;

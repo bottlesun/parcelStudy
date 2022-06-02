@@ -1,37 +1,47 @@
 @import "commonCSS";
 @import "header";
+@import "landing";
 
 body {
-  .CommonLayout{
+  .CommonLayout {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-family: SCoreDream;
+    font-family: SCoreDream sans-serif;
   }
 
-  header {
+  #mainWrap {
     width: 100%;
-    height: 70px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background: $mainColor;
-  }
-  .nav-fixed{
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+    height: 100%;
+    position: relative;
+    background: beige;
+
+    header {
+      width: 100%;
+      height: 70px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background: $mainColor;
+    }
+
+    .nav-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
 
-  main{
-    width: 100%;
-    height: 100vh;
-  }
+    main {
+      width: 100%;
+      height: 100vh;
+    }
 
-  footer {
-    width: 100%;
-    height: 150px;
-    background: #333333;
-    color:#fff;
+    footer {
+      width: 100%;
+      height: 150px;
+      background: #333333;
+      color: #fff;
+    }
   }
 }

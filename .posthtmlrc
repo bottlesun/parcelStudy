@@ -3,13 +3,13 @@
     "posthtml-include": {
       root: './src/',
        "alias": {
-                "common": "./src/common",
+                "components": "./src/components",
               }
     },
     "posthtml-extend": {
       root: './src/',
        "alias": {
-                "common": "./src/common",
+                "components": "./src/components",
               }
     }
   }
