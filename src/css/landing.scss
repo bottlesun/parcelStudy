@@ -1,22 +1,19 @@
 @import "commonCSS";
 
 body {
-  font-family: SCoreDream;
-  scrollbar-width: none; /* Firefox */
-
+  font-family: SCoreDream sans-serif;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-}
+
 
 .landings {
   width: 100%;
-  height: 100vh;
-  position: fixed;
+  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
+
 }
 
 .landingWrap {

@@ -241,4 +241,21 @@ body #mainWrap footer {
   color: #fff;
 }
 
+.mainContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContent span {
+  font-size: 40px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #555555;
+  color: #757C94;
+  position: absolute;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
 /*# sourceMappingURL=main.css.map */

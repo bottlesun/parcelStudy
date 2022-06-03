@@ -2,7 +2,20 @@
 @import "header";
 @import "landing";
 
+.scrollHidden{
+  scrollbar-width: none; /* Firefox */
+
+  .scrollHidden::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
+  overflow-x: hidden;
+
   .CommonLayout {
     display: flex;
     justify-content: center;
@@ -22,6 +35,7 @@ body {
       height: 70px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       background: $mainColor;
+      position: absolute;
     }
 
     .nav-fixed {
@@ -34,7 +48,7 @@ body {
 
     main {
       width: 100%;
-      height: 100vh;
+      height: 100%;
     }
 
     footer {
@@ -44,4 +58,56 @@ body {
       color: #fff;
     }
   }
+}
+
+.mainContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .content-1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 50px;
+      font-weight: 900;
+      -webkit-text-stroke: 1px #555555;
+      color: $mainColor;
+      z-index: 2;
+      position: absolute;
+      mix-blend-mode: multiply;
+    }
+    ul{
+      display: flex;
+      margin-top: 90px;
+      margin-left: 1.5em;
+      li{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1em;
+      }
+    }
+  }
+
+  .content-2{
+    width: 100%;
+    height: 500px;
+    background:url("http://bottlesun.pe.kr/img/forest2.svg") no-repeat bottom ;
+    span{
+      display: block;
+      font-size: 100px;
+      font-weight: 900;
+      -webkit-text-stroke: 1px #555555;
+      color: $mainColor;
+      z-index: 2;
+      mix-blend-mode: multiply;
+    }
+  }
+
 }

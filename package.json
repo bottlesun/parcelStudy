@@ -1,6 +1,7 @@
 {
   "name": "parcel",
   "version": "1.0.0",
+  "homepage": ".",
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel ",

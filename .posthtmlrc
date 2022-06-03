@@ -4,12 +4,14 @@
       root: './src/',
        "alias": {
                 "components": "./src/components",
+                "css": "./src/css",
               }
     },
     "posthtml-extend": {
       root: './src/',
        "alias": {
                 "components": "./src/components",
+                "css": "./src/css",
               }
     }
   }
